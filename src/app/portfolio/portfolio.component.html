@@ -1,0 +1,33 @@
+<div class="wrapper">
+<h1><strong>Work and Education</strong></h1>
+<div>
+<div *ngFor="let p of education" class="card mb-3" style="max-width: 740px">
+	<div class="row g-0 align-items-center">
+		<div class="col-4">
+			<img src='{{"assets/" + p.logo}}' class="img-fluid rounded-start" alt={{p.logo}}>
+		</div>
+		<div class="col-8 card-body">
+			<h4 class="card-title">{{p.title}}</h4>
+			<p class="card-text">{{p.description}}</p>
+			<p class="card-text text-right small">{{p.timeline}}</p>
+		</div>
+	</div>
+</div>
+</div>
+<h1><strong>Projects</strong></h1>
+<div>
+<div *ngFor="let p of projects" class="card mb-3" style="max-width: 740px">
+	<div class="row g-0 align-items-center">
+		<div class="col-4">
+			<img src='{{"assets/" + p.logo}}' class="img-fluid rounded-start" alt={{p.logo}}>
+		</div>
+		<div class="col-8 card-body">
+			<h4 class="card-title">{{p.title}}</h4>
+			<p class="card-text">{{p.description}}</p>
+			<a class="card-text small" *ngIf='p.expanded != ""' href="{{p.expanded}}">project link</a>
+			<p class="card-text text-right small">{{p.timeline}}</p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
